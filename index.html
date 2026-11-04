@@ -23,9 +23,6 @@ img{max-width:100%}
 .btn:hover{background:var(--green-dark);color:var(--cream)}
 .btn.out{background:none;border:1.5px solid var(--green);color:var(--green)}
 .btn.out:hover{background:var(--green);color:var(--cream)}
-.top{background:var(--green);color:var(--cream);font-size:14px}
-.top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:8px;padding-bottom:8px}
-.top a{color:var(--cream);text-decoration:none}
 header{border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;gap:28px;padding-top:12px;padding-bottom:12px}
 header nav{margin-left:auto;display:flex;gap:24px;font-weight:500;font-size:15px}
@@ -36,6 +33,7 @@ header nav a{text-decoration:none;color:var(--ink)}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .hero img{width:100%;height:540px;object-fit:cover;object-position:center 20%;border-radius:220px 220px 8px 8px;display:block}
 section{padding:80px 0}
+#visite{padding:0}
 h2.serif{font-size:clamp(30px,4.5vw,44px);line-height:1.1;margin:0 0 10px}
 .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
 .cat{position:relative;display:block;border-radius:12px;overflow:hidden;height:400px;text-decoration:none}
@@ -60,12 +58,6 @@ h2.serif{font-size:clamp(30px,4.5vw,44px);line-height:1.1;margin:0 0 10px}
 .gallery figure{margin:0;flex:0 0 280px;scroll-snap-align:start}
 .gallery img{width:100%;height:360px;object-fit:cover;display:block;border-radius:6px}
 .gallery figcaption{margin-top:8px;font-size:15px;color:#3F433A}
-.ig{display:flex;align-items:center;gap:16px;margin-top:22px;padding:18px 20px;border-radius:14px;background:var(--sand);text-decoration:none;color:var(--ink)}
-.ig:hover{background:#E2DAC8;color:var(--ink)}
-.ig .badge{flex:none;width:52px;height:52px;border-radius:14px;background:linear-gradient(45deg,#F58529,#DD2A7B 50%,#8134AF);display:flex;align-items:center;justify-content:center}
-.ig b{display:block;font-size:18px;color:var(--green)}
-.ig small{color:var(--muted);font-size:15px}
-.ig .go{margin-left:auto;font-weight:600;color:var(--green);white-space:nowrap}
 .visit{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:stretch}
 .hours{width:100%;border-collapse:collapse;margin-top:18px}
 .hours td{padding:9px 0;border-bottom:1px solid var(--line)}
@@ -84,15 +76,12 @@ footer .name{font:400 26px 'DM Serif Display',Georgia,serif;color:var(--cream)}
 .cat{height:280px}
 header nav{display:none}
 section{padding:56px 0}
+#visite{padding:0}
+.sec{padding-top:56px !important;padding-bottom:56px !important}
 }
 </style>
 </head>
 <body>
-
-<div class="top"><div class="wrap">
-<span>Avenida da Cultura, 213 · Centro · Vale Real, RS</span>
-<a href="https://wa.me/5551996830035">WhatsApp (51) 99683-0035</a>
-</div></div>
 
 <header><div class="wrap">
 <a href="#inicio"><img src="images/logo.png" alt="Lurdes Moda Fashion" style="height:56px;width:auto;display:block"></a>
@@ -106,8 +95,8 @@ section{padding:56px 0}
 <h1 class="serif">Trajes gaúchos, alemães e moda para toda a família.</h1>
 <p class="sub">Do baile do CTG à festa típica e ao dia a dia — com atendimento pelo nome e conselho sincero sobre o que fica melhor.</p>
 <div class="ctas">
-<a class="btn" href="https://wa.me/5551996830035">Pedir pelo WhatsApp</a>
-<a class="btn out" href="#colecoes">Ver coleções</a>
+<a class="btn" href="https://wa.me/5551996830035"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Fale com a gente</a>
+<a class="btn out" href="#visite">Ver endereço</a>
 </div>
 </div>
 <img src="images/hero.jpg" alt="Cliente vestindo poncho marrom e saia de camurça, com cuia de chimarrão">
@@ -182,26 +171,37 @@ move(1);
 </script>
 </div></section>
 
-<section id="visite"><div class="wrap visit">
-<div>
-<h2 class="serif">Venha nos visitar</h2>
-<table class="hours">
-<tr><td>Segunda a sexta</td><td>[horário]</td></tr>
-<tr><td>Sábado</td><td>[horário]</td></tr>
-</table>
-<p style="margin:22px 0 0">Avenida da Cultura, 213 · Centro · Vale Real, RS<br><a href="https://wa.me/5551996830035">(51) 99683-0035</a></p>
-<a class="ig" href="https://instagram.com/lurdesmodafashion">
-<span class="badge"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="#fff"/></svg></span>
-<span><b>@lurdesmodafashion</b><small>Novidades e chegadas toda semana</small></span>
-<span class="go">Seguir &#8594;</span>
-</a>
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
-<a class="btn" href="https://wa.me/5551996830035">Chamar no WhatsApp</a>
-<a class="btn out" href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+da+Cultura+213+Centro+Vale+Real+RS">Abrir rota no Maps</a>
+<section id="visite" style="background: #EBE5D7">
+<div class="sec" style="max-width: 1180px; margin: 0 auto; padding: 88px 20px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(32px, 6vw, 46px); line-height: 1.1; color: #1C452F">Venha nos visitar</h2>
+<div style="margin-top: 32px; display: flex; flex-direction: column; gap: 26px">
+<div style="display: flex; gap: 16px; align-items: flex-start">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A5427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+<div><h3 style="margin: 0; font-size: 17px; font-weight: 600">Endereço</h3><p style="margin: 4px 0 0; color: #3F433A">Avenida da Cultura, 213<br>Centro — Vale Real, RS</p></div>
+</div>
+<div style="display: flex; gap: 16px; align-items: flex-start">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A5427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<div><h3 style="margin: 0; font-size: 17px; font-weight: 600">Horário</h3><p style="margin: 4px 0 0; color: #3F433A">Segunda a sexta: [horário]<br>Sábado: [horário]</p></div>
+</div>
+<div style="display: flex; gap: 16px; align-items: flex-start">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A5427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+<div><h3 style="margin: 0; font-size: 17px; font-weight: 600">WhatsApp e telefone</h3><p style="margin: 4px 0 0; color: #3F433A"><a href="https://wa.me/5551996830035">(51) 99683-0035</a></p></div>
+</div>
+<div style="display: flex; gap: 16px; align-items: flex-start">
+<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A5427" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg>
+<div><h3 style="margin: 0; font-size: 17px; font-weight: 600">Instagram</h3><p style="margin: 4px 0 0; color: #3F433A"><a href="https://instagram.com/lurdesmodafashion">@lurdesmodafashion</a></p></div>
 </div>
 </div>
-<iframe class="map" loading="lazy" src="https://maps.google.com/maps?q=Avenida%20da%20Cultura%20213%20Vale%20Real%20RS&amp;z=16&amp;output=embed" title="Mapa com a localização da loja" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div></section>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px">
+<a href="https://wa.me/5551996830035" style="text-decoration: none; background: #1C452F; color: #F5F1E8; padding: 15px 26px; border-radius: 999px; font-weight: 600">Chamar no WhatsApp</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+da+Cultura+213+Centro+Vale+Real+RS" style="text-decoration: none; border: 1.5px solid #1C452F; color: #1C452F; padding: 14px 26px; border-radius: 999px; font-weight: 600">Abrir no Google Maps</a>
+</div>
+</div>
+<iframe loading="lazy" src="https://maps.google.com/maps?q=Avenida%20da%20Cultura%20213%20Vale%20Real%20RS&amp;z=16&amp;output=embed" title="Mapa com a localização da loja" referrerpolicy="no-referrer-when-downgrade" style="flex: 1 1 420px; min-width: 0; min-height: clamp(280px, 60vw, 420px); border: 0; border-radius: 8px; background: #DCD4C1"></iframe>
+</div>
+</section>
+
 
 <footer style="background: #1C452F; color: #E9E3D3">
 <div style="max-width: 1180px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px">
