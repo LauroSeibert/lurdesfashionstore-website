@@ -157,7 +157,28 @@ section{padding:56px 0}
 <figure><img loading="lazy" src="images/loja-guaiacas.jpg" alt="Guaiacas de couro expostas na loja" style="object-position:center 40%"><figcaption>Guaiacas de couro</figcaption></figure>
 </div>
 <script>
-document.querySelectorAll('.arrows button').forEach(function(b){b.addEventListener('click',function(){var g=document.getElementById('gallery');g.scrollBy({left:(g.querySelector('figure').offsetWidth+20)*+b.dataset.dir,behavior:'smooth'});});});
+(function(){
+var g=document.getElementById('gallery');
+function step(){return g.querySelector('figure').offsetWidth+20;}
+function move(dir){
+var end=g.scrollWidth-g.clientWidth-4;
+if(dir>0&&g.scrollLeft>=end){g.scrollTo({left:0,behavior:'smooth'});}
+else if(dir<0&&g.scrollLeft<=0){g.scrollTo({left:g.scrollWidth,behavior:'smooth'});}
+else{g.scrollBy({left:step()*dir,behavior:'smooth'});}
+}
+document.querySelectorAll('.arrows button').forEach(function(b){b.addEventListener('click',function(){move(+b.dataset.dir);pauseFor(8000);});});
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var paused=false,resumeAt=0;
+function pauseFor(ms){resumeAt=Date.now()+ms;}
+['mouseenter','focusin','touchstart'].forEach(function(e){g.addEventListener(e,function(){paused=true;},{passive:true});});
+['mouseleave','focusout'].forEach(function(e){g.addEventListener(e,function(){paused=false;});});
+g.addEventListener('touchend',function(){paused=false;pauseFor(8000);},{passive:true});
+setInterval(function(){
+if(paused||document.hidden||Date.now()<resumeAt)return;
+var r=g.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+move(1);
+},4500);
+})();
 </script>
 </div></section>
 
