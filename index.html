@@ -54,7 +54,10 @@ h2.serif{font-size:clamp(30px,4.5vw,44px);line-height:1.1;margin:0 0 10px}
 .arrows{display:flex;gap:10px}
 .arrows button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--green);background:none;color:var(--green);font-size:20px;cursor:pointer}
 .arrows button:hover{background:var(--green);color:var(--cream)}
-.gallery{display:flex;gap:20px;margin-top:28px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:12px;scrollbar-width:thin}
+.gallery{display:flex;gap:20px;margin-top:28px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.track{position:relative;height:2px;background:var(--line);margin-top:24px;border-radius:2px;overflow:hidden}
+.track span{position:absolute;top:0;left:0;height:100%;background:var(--green);border-radius:2px;transition:left .3s ease,width .3s ease}
 .gallery figure{margin:0;flex:0 0 280px;scroll-snap-align:start}
 .gallery img{width:100%;height:360px;object-fit:cover;display:block;border-radius:6px}
 .gallery figcaption{margin-top:8px;font-size:15px;color:#3F433A}
@@ -91,7 +94,7 @@ section{padding:56px 0}
 
 <div id="inicio" class="wrap hero">
 <div>
-<p class="eyebrow">Loja de família em Vale Real</p>
+<p class="eyebrow">Moda em geral · Trajes gaúchos · Trajes típicos alemães</p>
 <h1 class="serif">Trajes gaúchos, alemães e moda para toda a família.</h1>
 <p class="sub">Do baile do CTG à festa típica e ao dia a dia — com atendimento pelo nome e conselho sincero sobre o que fica melhor.</p>
 <div class="ctas">
@@ -145,9 +148,13 @@ section{padding:56px 0}
 <figure><img loading="lazy" src="images/lencos.jpg" alt="Lenços vermelhos e branco com passadores"><figcaption>Lenços e passadores</figcaption></figure>
 <figure><img loading="lazy" src="images/loja-guaiacas.jpg" alt="Guaiacas de couro expostas na loja" style="object-position:center 40%"><figcaption>Guaiacas de couro</figcaption></figure>
 </div>
+<div class="track" aria-hidden="true"><span id="track-bar"></span></div>
 <script>
 (function(){
 var g=document.getElementById('gallery');
+var bar=document.getElementById('track-bar');
+function sync(){var w=g.clientWidth/g.scrollWidth,max=g.scrollWidth-g.clientWidth;bar.style.width=(w*100)+'%';bar.style.left=(max>0?(g.scrollLeft/max)*(1-w)*100:0)+'%';}
+g.addEventListener('scroll',sync,{passive:true});window.addEventListener('resize',sync);sync();
 function step(){return g.querySelector('figure').offsetWidth+20;}
 function move(dir){
 var end=g.scrollWidth-g.clientWidth-4;
