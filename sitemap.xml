@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://lurdesmodafashion.com.br/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <image:image><image:loc>https://lurdesmodafashion.com.br/images/poncho-cuia-chimarrao-lurdes-moda-fashion-vale-real.webp</image:loc></image:image>
+    <image:image><image:loc>https://lurdesmodafashion.com.br/images/interior-loja-guaiacas-lurdes-moda-fashion-vale-real.webp</image:loc></image:image>
+    <image:image><image:loc>https://lurdesmodafashion.com.br/images/vestido-de-prenda-traje-gaucho-vale-real.webp</image:loc></image:image>
+    <image:image><image:loc>https://lurdesmodafashion.com.br/images/colete-bordado-traje-tipico-vale-real.webp</image:loc></image:image>
+    <image:image><image:loc>https://lurdesmodafashion.com.br/images/botas-de-couro-e-chapeu-vale-real.webp</image:loc></image:image>
+    <image:image><image:loc>https://lurdesmodafashion.com.br/images/cintos-de-couro-faixa-pampa-vale-real.webp</image:loc></image:image>
+    <image:image><image:loc>https://lurdesmodafashion.com.br/images/lencos-gauchos-e-passadores-vale-real.webp</image:loc></image:image>
   </url>
 </urlset>
