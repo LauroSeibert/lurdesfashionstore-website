@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Site estático da Lurdes Moda Fashion, publicado como Worker com assets.
+  // Cada push na branch main publica o site automaticamente (Workers Builds).
+  "name": "lurdesmodafashion",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public"
+  },
+  "routes": [
+    { "pattern": "lurdesmodafashion.com.br", "custom_domain": true },
+    { "pattern": "www.lurdesmodafashion.com.br", "custom_domain": true }
+  ]
+}
